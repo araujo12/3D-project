@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject enemy;
+    public Transform spawnPosition;
+    public GameObject spawnenemy;
+    public float countEnemy;
+    private int waveEnemy;
+
     void Start()
     {
         
@@ -13,11 +17,14 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpawnEnemysGame();
         
     }
 
+    //Spawn inimigos
     void SpawnEnemysGame()
     {
-
+      Instantiate(spawnenemy, spawnPosition.transform.position, Quaternion.identity);      
     }
+
 }

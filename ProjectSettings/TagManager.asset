@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - LevelPart
   - Dummie
+  - Signal
   layers:
   - Default
   - TransparentFX
