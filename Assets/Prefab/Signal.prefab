@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2637397124904696210}
   - component: {fileID: 2637397124904696211}
   - component: {fileID: 2637397124904696208}
+  - component: {fileID: -8941714978129790997}
   m_Layer: 0
   m_Name: Signal
   m_TagString: Signal
@@ -97,3 +98,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-8941714978129790997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2637397124904696209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24b93ecb46f33145bad43ba345383cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySpeed: 0
+  target: {fileID: 0}

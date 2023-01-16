@@ -16,26 +16,17 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         EnemyTargetPlayer();
-        EnemyTargetSignal();
+        
     }
 
     void EnemyTargetPlayer()
     {
-        enemyPosition = /*GameObject.FindGameObjectWithTag("Player").transform*/target.transform;
+        enemyPosition = GameObject.FindGameObjectWithTag("Player").transform;
 
         if(enemyPosition.gameObject != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, enemyPosition.position, enemySpeed * Time.deltaTime);
         }
     }
-
-    void EnemyTargetSignal()
-    {
-        enemyPosition = /*GameObject.FindGameObjectWithTag("Player").transform*/target.transform;
-        if (enemyPosition.gameObject != null)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, enemyPosition.position, enemySpeed * Time.deltaTime);
-        }
-    }
-
+    
 }
