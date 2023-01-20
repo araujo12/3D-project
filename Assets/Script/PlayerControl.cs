@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    public float speed,mouseSpeed,forceJump;
+    
+    public float speed,mouseSpeed,forceJump, speedShot,shotx,shoty;
     public bool lockedMouse = true;
     private float mouseX = 0.0f, mouseY = 0.0f;
+    public Object bullet;
+    public Transform gunPlayer;
+    
     void Start()
     {
-        TravarMouse();        
+        TravarMouse();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         MoviPlayer();
+        FirePlayer();
     }
     //Travar mouse no centro da tela
     void TravarMouse()
@@ -48,8 +54,15 @@ public class PlayerControl : MonoBehaviour
         {
             transform.Translate(0, forceJump, 0);
         }
+    }
 
-
-
+    // Sistema de Tiro do Player
+    void FirePlayer()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {            
+            Instantiate(bullet,gunPlayer.transform.position, Quaternion.identity);
+                       
+        }
     }
 }

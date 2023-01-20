@@ -22,7 +22,7 @@ public class SpawnEnemy : MonoBehaviour
     }
 
     //Spawn inimigos
-    void SpawnEnemysGame()
+    public void SpawnEnemysGame()
     {
         //primneira Orda de inimigos
       if(waveEnemy == 1)
